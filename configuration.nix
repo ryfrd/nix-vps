@@ -93,6 +93,7 @@
       initialPassword = "changethisyoupickle";
       extraGroups = [
         "wheel"
+        "docker"
       ];
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKW4ofxuyFKtDXCHHR6UDf5hGolKwZqt3h7SFLCCy++6 james@baron" # desktop
@@ -108,8 +109,6 @@
     liveRestore = false;
     autoPrune.enable = true;
   };
-
-  users.users.james.extraGroups = [ "docker" ];
 
   # cron
   services.cron = {
